@@ -1,0 +1,28 @@
+<form [formGroup]="flightForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="airline">Airline</label>
+      <input type="text" id="airline" formControlName="airline" required>
+    </div>
+    <div>
+      <label for="arrivalDate">Arrival Date</label>
+      <input type="date" id="arrivalDate" formControlName="arrivalDate" required>
+    </div>
+    <div>
+      <label for="arrivalTime">Arrival Time</label>
+      <input type="time" id="arrivalTime" formControlName="arrivalTime" required>
+    </div>
+    <div>
+      <label for="flightNumber">Flight Number</label>
+      <input type="text" id="flightNumber" formControlName="flightNumber" required>
+    </div>
+    <div>
+      <label for="numOfGuests">Number of Guests</label>
+      <input type="number" id="numOfGuests" formControlName="numOfGuests" required min="1">
+    </div>
+    <div>
+      <label for="comments">Comments (Optional)</label>
+      <textarea id="comments" formControlName="comments"></textarea>
+    </div>
+    <button type="submit" [disabled]="!flightForm.valid">Submit</button>
+  </form>
+
