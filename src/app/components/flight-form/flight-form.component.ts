@@ -32,7 +32,7 @@ export class FlightFormComponent {
     this.flightService.submitFlightDetails(this.flightForm.value).subscribe({
       next: (response) => {
         // Handle success
-        alert('The return result is ' + response)
+        alert('Thank you for submitting. The return result is ' + response)
         console.log('Submission successful', response);
         
 
